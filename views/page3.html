@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  
+    <title>Tutorial</title>
+    <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"> -->
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <!-- ICON NEEDS FONT AWESOME FOR CHEVRON UP ICON -->
+    <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
+   
+
+    <!-- Return to Top -->
+    <a href="javascript:" id="return-to-top"><i class="icon-chevron-up"></i></a>
+    <link rel="stylesheet" href="/public/css/bsummary.css">
+    
+    
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+            
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!--Import materialize.css-->
+    
+    <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+    
+    
+      <style type="text/css">
+        .parallax-container {
+          height: 300px;
+        }
+        #westwild3 {
+          height: 250px;
+        }
+        .heading {
+            font-weight: bold;
+        }
+        xmp {
+            white-space: pre-wrap;
+
+        }
+        pre, xmp {
+            margin-bottom: 0px;
+
+        }
+        .card-panel {
+            padding: 5 5;
+        }
+        li {
+            margin-bottom: 5px;
+        }
+        .card{
+          width: 100%;
+          max-width: 403px;
+        }
+        #walkjpg {
+          width: 100%; 
+          max-width: 400px;
+        }
+
+
+  </style>
+     <script type="text/javascript"> 
+       $(document).ready(function(){
+        $('.parallax').parallax();
+        $('.materialboxed').materialbox();
+        $('.modal').modal();
+        $('.tooltipped').tooltip();
+        $('.slider').slider();
+
+
+        });
+
+        
+      </script>
+      <%- //include("partials/dependencies") %>
+
+
+</head>
+<body>
+      <%- include("partials/navbar") %>
+
+    <div class="container">
+    <h1>Tutorials</h1>
+    <!-- TUTORIAL: PARALLAX -->
+    <div class="description">
+    <h2>Parallax</h2>
+    <p>Parallax is an effect where the background image is moved at a different speed than the foreground content while scrolling. <strong>Scroll to the next tutorial to see it in action.</strong><span class="more pink-text text-lighten-2"> (This also features CSS from Materialize's Color Palette and Card Panel added to the class).</span> </p>
+    <!-- Code Documentation -->
+
+    <div class="code card-panel deep-orange lighten-5 ">
+    <!-- HTML Code -->
+        <p class="heading">HTML</p>
+    <xmp>
+    <div class="parallax-container">
+     <div class="parallax"> 
+         <img src="/public/img/kitchen.jpg" alt="Door to another Door">
+     </div>
+    </div>
+    </xmp>
+    <!-- JavaScript Code -->
+
+    <p class="heading">JavaScript</p>
+        <pre>
+        $(document).ready(function(){
+        $('.parallax').parallax();
+        </pre>
+    <!-- CSS HTML -->
+     <p class="heading blue-grey-text text-lighten-2">This Box's CSS</p>
+        <xmp>
+      <div class="card-panel deep-orange lighten-5"></div>
+        </xmp>
+
+    </div>
+
+    <!-- Action -->
+    <div class="parallax-container">
+        <div class="parallax"><img src="/public/img/kitchen.jpg" alt="mypic">
+        </div>
+    </div>
+    </div>
+    <div class="section white">
+    <!-- TUTORIAL: CARD REVEAL -->
+    <div class="description">
+    <h2>Card Reveal</h2>
+    <p>Card Reveal is an effect that consists of content, mostly of an image, that reveals more information once clicked with optional icons on the bottom right to click as well. Inside the <strong>div.card</strong>, add the three other divs: <strong>card-image</strong>, <strong>card-content (description before reveal)</strong> and <strong>card-reveal (description after reveal)</strong>. Just add the <strong>card-reveal div </strong> with a <strong>span.card-title</strong> inside to make this work. Add the class <strong>activator</strong> to the image and content inside the card to allow it to open the card reveal.<strong> Scroll to the next tutorial to see it in action.</strong></p>
+    <!-- Code Documentation -->
+      <div class="code card-panel deep-orange lighten-5 ">
+        <!-- HTML Code -->
+         <p class="heading">HTML</p>
+      <xmp>
+      <div class="card">
+       <div class="card-image kitchen">
+          <img class="activator" src="/public/img/kitchen.jpg">
+       </div>
+       <div class="card-content">
+        <span class="card-title activator">Card Title
+            <i class="material-icons right">more_vert</i></span>
+         <p>Add text (optional)</p>
+       </div>
+       <div class="card-reveal">
+          <span class="card-title">Card Title
+            <i class="material-icons right">close</i></span>
+           <p>Add text</p>
+        </div>
+       </div>
+         </xmp>
+      </div>
+     <!-- Action -->
+
+        <div class="card">
+          <div class="card-image">
+              <img class="activator" src="/public/img/kitchen.jpg" >
+         </div>
+          <div class="card-content">
+            <span class="card-title activator grey-text   text-darken-4">Card Title<i class="material-icons right">more_vert</i></span>
+             <p>Add text (optional)</p>
+            </div>
+        <div class="card-reveal">
+            <span class="card-title grey-text text-darken-4">Card Title<i class="material-icons right">close</i></span>
+            <p>Add text</p>
+        </div>
+        </div>
+
+
+      </div>
+      </div>
+      <!-- TUTORIAL: MODAL -->
+     <!--  <div class="description">
+        <h2>Modal</h2>
+        <p>Use a modal for dialog boxes, confirmation messages, or other content that can be called up. In order for the modal to work you have to add the Modal ID to the link of the trigger. To add a close button, just add the class <strong>.modal-close</strong> to your button "#!" takes you back to normal view of the page.</p>
+        <div class="code card-panel deep-orange lighten-5 ">
+         <p class="heading">HTML</p>
+         <xmp> -->
+      <!-- Modal Trigger -->
+    <!-- <a class="btn modal-trigger" href="#modal1">Modal</a> -->
+    <!-- Modal Structure -->
+       <!-- <div id="modal1" class="modal">
+            <div class="modal-content">
+            <h4>Modal Header</h4>
+            <p>Add text</p>
+        </div>
+        <div class="modal-footer">
+            <a href="#!" class="modal-close btn-flat">Close</a>
+        </div>
+      </div>
+         </xmp>
+
+        </div> -->
+        <!-- Modal Trigger -->
+        <!-- <a class="btn modal-trigger" href="#modal1">Modal</a> -->
+
+        <!-- Modal Structure -->
+       <!--  <div id="modal1" class="modal">
+            <div class="modal-content">
+            <h4>Modal Header</h4>
+            <p>Add text</p>
+        </div>
+        <div class="modal-footer">
+            <a href="#!" class="modal-close btn-flat">Close</a>
+        </div>
+      </div>
+      </div> -->
+      <!-- MODAL END -->
+
+      <!-- MATERIAL BOX START -->
+      <div class="description">
+        <h2>Material Box</h2>
+        <p>When a user clicks on an image that can be enlarged,Material box centers the image and enlarges it in a smooth, non-jarring manner. To dismiss the image, the user can either click on the image again, scroll away, or press the ESC key. <strong>Click the image below to see it in action.</strong></p>
+        <div class="code card-panel deep-orange lighten-5 ">
+        <p class="heading">HTML</p>
+        <xmp>
+          <img class="materialboxed" width="650" src="/public/img/kengowalk.jpg">
+
+        </xmp>
+        <p class="heading">JavaScript</p>
+        <xmp>
+          $(document).ready(function(){
+          $('.materialboxed').materialbox();
+          });
+        </xmp>
+        </div>
+         <img id="walkjpg" class="materialboxed" src="/public/img/kengowalk.jpg">
+      </div>
+
+
+      <!-- MATERIAL BOX END -->
+  <!-- TOOLTIP START -->
+  <div class="description">
+        <h2>Tooltips</h2>
+        <p>Tooltips are small, interactive, textual hints for mainly graphical elements. Hover over a tooltip to gain more information on the text, button or other element it is used for.<br><strong>data-position</strong> dictates what position <i>(left, right, top or bottom)</i> the tooltip appears. <strong>data-tooltip</strong> sets the text in the tooltip </p>
+        <div class="code card-panel deep-orange lighten-5 ">
+        <p class="heading">HTML</p>
+        <xmp>
+          <a class="btn tooltipped" data-position="top" data-tooltip="I am a tooltip">Button Text</a>
+        </xmp>
+        <p class="heading">JavaScript</p>
+        <xmp>
+          $(document).ready(function(){
+          $('.tooltipped').tooltip();
+          });
+        </xmp>
+        </div>
+         <a class="btn tooltipped" data-position="top" data-tooltip="I am a tooltip">Button Text</a>
+  </div>
+  <!-- TOOLTIOP END -->
+
+  <!-- SLIDER START -->
+  <div class="description">
+        <h2>Slider</h2>
+        <p>A simple and elegant image slideshow with transitions. You can also have captions that will be transitioned on their own depending on their alignment. You can also have indicators that show up on the bottom of the slider. <strong class="pink-text text-lighten-2">This feature is only shown in mobile or tablet version for demo page</strong></p>
+        <div class="code card-panel deep-orange lighten-5 ">
+        <p class="heading">HTML</p>
+        <xmp>
+          <div class="slider">
+            <ul class="slides">
+            <li>
+              <img src="yourimage.jpg">
+            <div class="caption center-align">
+              <h3>This is our big Tagline!</h3>
+              <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
+             </div>
+            </li>
+            <li>
+             <img src="yourimage.jpg"> 
+             <div class="caption left-align">
+             <h3>Left Aligned Caption</h3>
+             <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
+             </div>
+            </li>
+        </xmp>
+        <p class="heading">JavaScript</p>
+        <xmp>
+          $(document).ready(function(){
+          $('.slider').slider();
+          });
+        </xmp>
+        </div>
+         <div class="slider">
+            <ul class="slides">
+            <li>
+              <img src="/public/img/kengowalk.jpg">
+            <div class="caption center-align">
+              <h3>Center Aligned Caption!</h3>
+              <h5 class="light grey-text text-lighten-3">Add text</h5>
+             </div>
+            </li>
+            <li>
+             <img src="/public/img/kengowalk.jpg"> <!-- random image -->
+             <div class="caption left-align">
+             <h3>Left Aligned Caption</h3>
+             <h5 class="light grey-text text-lighten-3">Add text</h5>
+             </div>
+            </li>
+          </div>
+
+
+  <!-- SLIDER END -->
+
+</div>
+
+<script>// ===== Scroll to Top ==== 
+  $(window).scroll(function() {
+      if ($(this).scrollTop() >= 50) {        // If page is scrolled more than 50px
+          $('#return-to-top').fadeIn(200);    // Fade in the arrow
+      } else {
+          $('#return-to-top').fadeOut(200);   // Else fade out the arrow
+      }
+  });
+  $('#return-to-top').click(function() {      // When arrow is clicked
+      $('body,html').animate({
+          scrollTop : 0                       // Scroll to top of body
+      }, 500);
+  });</script>
+  </div> 
+  <br>
+  <br>
+  <br>
+  
+      <%- include("partials/footer") %>
+
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!-- Dropdown Structure -->
+
+
+<nav class="bg-theme lighten-1" role="navigation">
+    <ul id="dropdown1" class="dropdown-content red lighten-4">
+      <li><a href="/Installation-materialize"> <span class="black-text">Materialize</span></a></li>
+      <li><a href="/Installation"> <span class="black-text">Node JS</span></a></li>
+    </ul>
+    <ul class="right hide-on-med-and-down">
+        <li><a href="/">Home</a></li>
+        <li><a data-target="dropdown1" class="dropdown-trigger">Installation</a></li>
+        <li><a href="/page3">Tutorial</a></li>
+        <li><a href="/page4">Demo</a></li>
+        <li><a href="/page5">Conclusion</a></li>
+        <li><a href="/page6">Credits</a></li>
+    </ul>
+
+    <ul id="nav-mobile" class="sidenav">
+        <li><a href="/">Home</a></li>
+        <li><a class="active" href="/Installation">Installation</a></li>
+        <li><a href="/page3">Tutorial</a></li>
+        <li><a href="/page4">Demo</a></li>
+        <li><a href="/page5">Conclusion</a></li>
+        <li><a href="/page6">Credits</a></li>
+    </ul>
+        <a href="#" data-target="nav-mobile" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+    <!--</div>-->
+</nav>
+<script>
+    (function($){
+        $(function(){
+            $('.sidenav').sidenav();
+            $(".dropdown-trigger").dropdown();
+        }); // end of document ready
+    })(jQuery); // end of jQuery name space
+</script>

@@ -1,0 +1,38 @@
+html,body {
+margin: 0;
+height: 100%;
+}
+p {
+  font-family: 'Roboto', sans-serif;
+}
+img {
+  width:100%;
+}
+.row, h1 {
+   animation: pop-in .9s ease-out forwards;
+}
+
+.container {
+   word-wrap: break-word;
+}
+.custom-scrollbar {
+  height:300px;
+  overflow-y: scroll;
+}
+.square {
+  /* height: 242px; */
+  padding-bottom: 100%;
+  width: 100%;
+  background-color: #ee6e73;
+}
+/*TRANSITION*/
+@keyframes pop-in {
+  0% {
+    opacity: 0;
+    transform: translateY(-4rem) scale(.8);
+  }
+  100% {
+    opacity: 1;
+    transform: none;
+  }
+}

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title> Welcome </title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <%- include("partials/dependencies") %>
+
+  <link rel="stylesheet" href="/public/css/page1.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <!-- ICON NEEDS FONT AWESOME FOR CHEVRON UP ICON -->
+  <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <!-- Compiled and minified CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+  <!-- Compiled and minified JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+  <!--Import Google Icon Font-->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <!--Import materialize.css-->
+
+  <!--Let browser know website is optimized for mobile-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+</head>
+<body>
+  <%- include("partials/navbar") %>
+
+    <!-- <div class="container"> -->
+      <div class="row main">
+
+        <div class="col s12 m12 l6 col-12 col-md-6 left-side pb-5 pt-0 mb-5">
+          <div class="w-50 m-auto text">
+            <h1>Welcome</h1>
+            <p>A summary snapshot presentation of the chosen frontend Framework: Popularity, strengths, weaknesses, which developers mostly use it and for what kind of websites.</p>
+            <a class="waves-effect waves-light btn-large red lighten-2" href="/frontendsum">Front-End Summary</a>
+            <p id="demo"></p>
+            <p>A summary snapshot presentation of the chosen backend Framework: Popularity, strengths, weaknesses, which developers mostly use it and for what kind of websites.</p>
+          <a class="waves-effect waves-light btn-large red lighten-2 white-text" onclick="window.location.href ='/bsummary'">Back-End summary</a>
+          </div>
+        </div>
+        <div class="col s12 m12 l6 right-side">
+          <img src="/public/img/main5.png" alt="main image">
+        </div>
+      </div>
+    <!-- </div> -->
+
+    <script>
+      function fsummary() {
+      }
+    </script>
+
+
+<%- include("partials/footer") %>
+</body>
+</html>

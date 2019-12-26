@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <!-- ICON NEEDS FONT AWESOME FOR CHEVRON UP ICON -->
+    <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
+     <!-- Return to Top -->
+     <a href="javascript:" id="return-to-top"><i class="icon-chevron-up"></i></a>
+     <link rel="stylesheet" href="/public/css/bsummary.css">
+   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+     <!-- Compiled and minified CSS -->
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+     
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+     
+
+    <title>Demo</title>
+     <script type="text/javascript"> 
+       $(document).ready(function(){
+        $('.parallax').parallax();
+        $('.materialboxed').materialbox();
+        $('.slider').slider({
+          height: 363,
+          transition: 200,
+
+
+        });
+
+         /*-- The Tooltip -*/
+        $('.tooltipped').tooltip();
+        $('#toast').addClass('light-blue-text text-darken-3');
+        var trans = document.getElementById("toast");
+        trans.setAttribute("data-tooltip","&#34;gate-front towns&#34; that surrounded Buddhist and Shinto sites");
+
+
+        $(window).scroll(function(){
+          // scrollTop() sets or returns teh vertical scrollbar position
+        var positiontop = $(document).scrollTop();
+        console.log(positiontop);
+        if((positiontop > 203) && (positiontop < 401)){
+          $('#portland').html('Portland Japanese Garden');
+          $('#portland').addClass('animated fadeIn');
+
+        }
+      
+       });
+        });
+
+        
+      </script>
+      <style type="text/css">
+        
+          body {
+            /*margin-bottom: 5px;*/
+            /*border: 1px solid red;*/
+          }
+          .one {
+            height: 400px;
+          }
+          .portland {
+            padding-top: 150px;
+            margin: 0 0;
+          }
+          .fadeIn{
+            -webkit-animation-name: fadeIn;
+             animation-name: fadeIn;
+             -webkit-animation-duration: 4s;
+             animation-duration: 4s;
+          }
+          .zoomIn{
+            -webkit-animation-name: zoomIn;
+             animation-name: zoomIn;
+             -webkit-animation-duration: 2s;
+             animation-duration: 2s;
+          }
+          .material-tooltip {
+            background-color: lightsteelblue;
+            color: black;
+          }
+          .upstairs, .leftstairs {
+            height: 667px;
+
+          }
+          .leftstairs{
+            font-size: 20px;
+          }
+          .upstairs {
+            /*width: 50%;*/
+            /*border: 1px solid red;*/
+            margin: auto;
+          }
+          .leftstairs, .rightstairs {
+            /*border: 1px solid blue;*/
+          }
+          .second {
+           background: rgb(255,255,255);
+background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(255,235,238,1) 54%);
+          }
+          .photo {
+            overflow: hidden;
+            height: 465px;
+           /*border: 1px solid black;*/
+           margin-bottom: 10px;
+
+
+          }
+          .galleryTitle{
+            padding: 5px 10px;
+          }
+          .gallery {
+            /*border: 1px solid black;*/
+            margin-right: 10px;
+          }
+          #slider{
+            margin-left: 10px;
+            width:98%;
+/*            margin-right:10px;
+*/          }
+          .slider {
+            /*padding-left: 10px;*/
+            /*border: 1px solid pink;*/
+            /*margin-left: 10px;*/
+          }
+
+      </style>
+        <%- //include("partials/dependencies") %>
+
+</head>
+<body>
+    <%- include("partials/navbar") %>
+    <!-- PARALLAX START 1-->
+    <div class="parallax-container one">
+        <div class="section no-pad-bot">
+             <div class="container">
+            <br><br>
+        <h1 class="header left red-text text-lighten-5">Kengo Kuma</h1>
+        <br><br>
+
+      </div>
+    </div>
+        <div class="parallax one">
+            <img src="/public/img/kengohallway.jpg" alt="Kengo Hallway Orange">
+
+        </div>
+    </div>
+    <!-- PARALLAX END -->
+    <!-- WHITE SECTION START -->
+    <div class="section white">
+      <div class="row container">
+        <h3 class="header">Philosophy of Design</h3>
+        <h5 class="grey-text text-darken-3 lighten-3">For the future of architecture, what we need is sustainability, not only for the environment but also sustainability for human beings.
+        </h5>
+      </div>
+    </div>
+    <!-- WHITE SECTION End -->
+    <!-- PARALLAX 2 -->
+    <div class="parallax-container two">
+        <div class="section no-pad-bot">
+             <div class="container">
+            <br><br>
+            <h1 id="portland" class="portland header center red-text text-lighten-5"></h1>
+      </div>
+    </div>
+        <div class="parallax">
+            <img src="/public/img/kengocourtyard.jpg" alt="Kengo Hallway Orange">
+
+        </div>
+    </div>
+    <!-- PARALLAX 2 ENDS -->
+    <!-- WHITE SECTION START -->
+    <div class="section second">
+      <div class="row container">
+        <h3 class="header"></h3>
+        <h5 class="grey-text text-darken-3 lighten-3">Portland Japanese Garden's Cultural Village is a modest, human-scaled set of buildings arranged around a courtyard plaza, whose fourth side is the existing, untouched gardens from the 1960s. The project is a village positioned along a journey from the city to the top of the hill, a form of modern <a href="#!" id="toast" class="tooltipped" data-position="top" data-tooltip=""><i>monzenmachi</i></a> wherein the pilgrim pays homage to the spirit of nature.
+        </h5>
+      </div>
+    </div>
+    <!-- WHITE SECTION End -->
+    <!-- STAIRS DIV -->
+    <div class="row stairs">
+      <!-- Left side -->
+       <div class="col s12 m12 l6 center-align valign-wrapper leftstairs">
+         <p id="leed">At first glance, they recall Buddhist temples or other traditional Japanese architecture with their horizontality and the large overhangs extending over on each of the two floors. Before World War II, Japan’s architecture was mostly comprised of wood, and as soon as one steps inside there is wood everywhere.
+          <br>
+          In what makes a key signature for the architecture, there are also tall, thin wood slats that act as a partial shading—almost like drapes—for the floor-to-ceiling glass walls of these buildings. Kuma spoke of the shadows created by the wood slats, giving the otherwise glass façade an extra sense of depth while also mitigating solar heat gain (the project is LEED-certified).
+         </p>
+       </div>
+       <!-- Right side -->
+       <div class="col s12 m12 l6 rightstairs">
+        <div class="parallax-container upstairs">
+         <div class="parallax">
+            <img src="/public/img/kengoupstairs.jpg" alt="Kengo Hallway Orange">
+
+        </div>
+      </div>
+       </div>
+    </div>
+    <!-- STAIRS DIV END -->
+    <!-- EXTRA PROJECT PHOTOS start  -->
+    <!-- 
+    Small: change view to carousel
+    Medium: 2x8 so m6
+    Large: 4x4 so l3
+     -->
+    <div class="row gallery">
+      <h3 class="galleryTitle">Project Gallery</h3>
+      <div class="col hide-on-med-and-down l3 photo">
+       <img class="materialboxed" src="/public/img/kengostairs.jpg" >
+      </div>
+      <div class="col hide-on-med-and-down l3 photo">
+        <img class="materialboxed"src="/public/img/kengotrees.jpg">           
+      </div>
+      <div class="col hide-on-med-and-down l3 photo">
+         <img class="materialboxed" src="/public/img/kengoblueprint.jpg">
+
+      </div>
+      <div class="col hide-on-med-and-down l3 photo">
+         <img class="materialboxed" src="/public/img/kengoyard.jpg"> 
+      </div>  
+      <div class="col hide-on-med-and-down l3 photo">
+      <img class=" materialboxed" src="/public/img/kengoblueprint1.jpg"> 
+      </div>
+       <div class="col hide-on-med-and-down l3 photo">
+      <img class=" materialboxed" src="/public/img/kengoroof.jpg"> 
+      </div>
+      <div class="col hide-on-med-and-down l3 photo">
+      <img class=" materialboxed" src="/public/img/kengowalk.jpg"> 
+      </div>
+      <div class="col hide-on-med-and-down l3 photo">
+      <img class=" materialboxed" src="/public/img/kengocafe.jpg"> 
+      </div>
+      <!-- SLIDER mobile only -->
+      <div id="slider" class="container hide-on-large-only slider">
+    <ul class="slides">
+      <li>
+        <img class="responsive-img" src="/public/img/kengostairs.jpg" >
+      </li>
+      <li>
+        <img src="/public/img/kengotrees.jpg">           
+      </li>
+      <li>
+        <img  src="/public/img/kengoblueprint.jpg">
+        
+      </li>
+      <li>
+        <img  src="/public/img/kengoyard.jpg"> 
+        
+      </li>
+      <li>
+        <img  src="/public/img/kengoblueprint1.jpg"> 
+        
+      </li>
+            <li>
+        <img  src="/public/img/kengoroof.jpg"> 
+        
+      </li>
+          <li>
+        <img  src="/public/img/kengowalk.jpg"> 
+        
+      </li>
+        <li>
+        <img  src="/public/img/kengocafe.jpg"> 
+        
+      </li>
+    </ul>
+    </div>
+    
+    <!-- SLIDER ends -->
+    <br>
+    <br>
+   </div>
+        
+      
+      </div>
+    <!--EXTRA PROJECT PHOTOS end -->
+    <script>// ===== Scroll to Top ==== 
+        $(window).scroll(function() {
+            if ($(this).scrollTop() >= 50) {        // If page is scrolled more than 50px
+                $('#return-to-top').fadeIn(200);    // Fade in the arrow
+            } else {
+                $('#return-to-top').fadeOut(200);   // Else fade out the arrow
+            }
+        });
+        $('#return-to-top').click(function() {      // When arrow is clicked
+            $('body,html').animate({
+                scrollTop : 0                       // Scroll to top of body
+            }, 500);
+        });
+    </script>
+      <%- include("partials/footer") %>
+      
+      
+</body>
+</html>

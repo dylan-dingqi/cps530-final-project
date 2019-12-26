@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Conclusion</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <!-- ICON NEEDS FONT AWESOME FOR CHEVRON UP ICON -->
+    <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
+     <!-- Return to Top -->
+     <a href="javascript:" id="return-to-top"><i class="icon-chevron-up"></i></a>
+     <link rel="stylesheet" href="/public/css/bsummary.css">
+
+    <!-- Compiled and minified CSS -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <!-- ICONS -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+
+</head>
+  <body>
+    <%- include("partials/navbar") %>
+
+
+    <div class="container">
+      <h1> Conclusion</h1>
+
+      <ul class="collapsible">
+        <li>
+          <div class="collapsible-header grey lighten-5 hoverable"><i class="material-icons">add_box</i>Rate your experience with the frameworks that you chose.</div>
+          <div class="collapsible-body"><span>  For the backend, we chose Node.js with Express framework, we would rate it 10 out of 10. And we would rate 8/10 for Materialize,
+          our choice for the frontend framework. It was fairly easy to understand and use, however, we found it had very limited options to work with.</span></div>
+        </li>
+        <li>
+          <div class="collapsible-header grey lighten-5 hoverable"><i class="material-icons">add_box</i>Did they perform to your expectations?</div>
+          <div class="collapsible-body"><span>For the backend, we chose Node.js with Express framework.
+          It performed just as our expectations. It was easy to install, configure, and use. With Materialize, the functions we used worked to our expectations, however, it was just lacking in variety.</span></div>
+        </li>
+        <li>
+          <div class="collapsible-header grey lighten-5 hoverable"><i class="material-icons">add_box</i>Were they difficult to install or configure?</div>
+          <div class="collapsible-body"><span>It was easy to install and configure node.js and configure. Node.js has a package management system called NPM, we  can initialize a project very easily by running command “npm init”.
+          We can also install dependencies easily by running npm commands. For example, to install Express framework, we can run command “npm install express”. Materialize was also easy to install and configure, we had no issues with it.</span></div>
+        </li>
+        <li>
+          <div class="collapsible-header grey lighten-5 hoverable"><i class="material-icons">add_box</i>Was it easy to create the page(s) with it?</div>
+          <div class="collapsible-body"><span>It was fairly easy to create pages with node.js. Initially, we were planning to host HTML files using express.static function. But to avoid redundancy in the HTML code, we decided to take advantage of Node.js’s rendering engines.
+          In our app, we used EJS rendering engine, it has similar notations as HTML, with extra functionalities such as “include”. We used it to have one global navbar and footer, and we included it in each page, so to make changes, we can just edit the global code, and changes will take effect on all pages.
+          We can say the same with Materialize, as it was extremely straightforward to follow and understand how to implement its features into our pages. It definitely offered
+          its services with UI/UX experience first in mind.</span></div>
+        </li>
+        <li>
+          <div class="collapsible-header grey lighten-5 hoverable"><i class="material-icons">add_box</i>Was the learning curve steep compared with regular HTML/CSS/Javascript/PHP?</div>
+          <div class="collapsible-body"><span>  For backend, learning Node.js was as not as steep at first, because it is very different from PHP, and we didn’t know much about routing.
+            However, the learning curve gets much steeper as we learned more, since it uses the same syntax as JavaScript, and NPM provides many packages that we can easily use in our app.
+            We felt like it was not a steep learning curve with with Materialize, as it was very straightforward from the beginning. Tutorials and examples were to the point and very easy to follow
+            and to manipulate for our own customization. </span></div>
+        </li>
+        <li>
+          <div class="collapsible-header grey lighten-5 hoverable"><i class="material-icons">add_box</i>Would you have done things differently in retrospect?</div>
+          <div class="collapsible-body"><span>Yes, in retrospect, we would have designed the pages ahead of time to have a consistent theme. We made our pages individually, so they they were not as consistent. Therefore,
+          when we added a global CSS styling, some pages were not compatible with it. With Materialize, it's 50% yes and no, since it was easy to use, but options in features and functions were limited.
+</span></div>
+        </li>
+        <li>
+          <div class="collapsible-header grey lighten-5 hoverable"><i class="material-icons">add_box</i>Did you regret your choice of frameworks?</div>
+          <div class="collapsible-body"><span> We don’t regret our choice of frameworks.</span></div>
+        </li>
+      </ul>
+    </p>
+  </div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      var elems = document.querySelectorAll('.collapsible');
+      var instances = M.Collapsible.init(elems, options);
+    });
+
+    // Or with jQuery
+
+    $(document).ready(function(){
+      $('.collapsible').collapsible();
+  });
+  </script>
+
+
+    <script>// ===== Scroll to Top ====
+        $(window).scroll(function() {
+            if ($(this).scrollTop() >= 50) {        // If page is scrolled more than 50px
+                $('#return-to-top').fadeIn(200);    // Fade in the arrow
+            } else {
+                $('#return-to-top').fadeOut(200);   // Else fade out the arrow
+            }
+        });
+        $('#return-to-top').click(function() {      // When arrow is clicked
+            $('body,html').animate({
+                scrollTop : 0                       // Scroll to top of body
+            }, 500);
+        });</script>
+
+
+<br>
+<br>
+<br>
+      <%- include("partials/footer") %>
+
+</body>
+</html>

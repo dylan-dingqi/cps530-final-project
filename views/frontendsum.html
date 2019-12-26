@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Front-End Summary</title>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+	<!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script> -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+	<!-- ICON NEEDS FONT AWESOME FOR CHEVRON UP ICON -->
+	<link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
+	<!-- Return to Top -->
+	<a href="javascript:" id="return-to-top"><i class="icon-chevron-up"></i></a>
+	<link rel="stylesheet" href="/public/css/bsummary.css">
+
+	<!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <!-- ICONS -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<%- //include("partials/dependencies") %>
+     <style>
+        .center-align {
+            margin-top: 20px;
+            max-width: 50%;
+        }
+        h1 {
+            margin-top:23px;
+        }
+
+     </style>
+
+</head>
+<body>
+	<%- include("partials/navbar") %>
+  <div class="container">
+    <img class="center-align" src="public/img/materializelogo.png">
+  </div>
+	<div class="container">
+      
+	<div class = "row">
+    <div class="col s12 m9 l10">
+        <div id="Summary" class="scrollSpy">
+		<h1>Front End Summary: <span class="racking-in-expand-fwd">Materialize</span></h1>
+		<h2>Summary</h2>
+
+	    <p class="flow-text">Materialize is a fairly new open source responsive front-end framework based on Google’s Material Design. Material Design is a language that combines the classic principles of design along with innovation and technology. Materialize allows for a unified user experience across all products on any platform. Developed by four students from Carnegie Mellon University, Materialize aims to look and function like it could in the physical world. </p>
+	    </div>
+	    <div id="Popularity" class="scrollSpy">
+		<h2>Popularity & Uses:</h2>
+		<p class="flow-text">As a fairly new framework, it’s not as popular or widely used as other front-end frameworks like Bootstrap but is considered in articles that feature lists of popular frameworks such as Bootstrap Foundation and SemanticUI (Scotch.io) (Altexsoft) and has gained 36k stars on GitHub.
+
+		Very few notable websites use Materialize. Some outlined in Altexsoft website are:RSJoomla!, Closeheat, Post Planner, Fuddruckers. Altexsoft considers it ideal for less experienced developers looking for a guided introduction to material design specifications.
+		</p>
+	    </div>
+	    <div id="Strengths" class ="scrollSpy">
+				<h2>Strengths</h2>
+				 <table class="striped">
+          		<tr>
+            		<td>
+            		It follows Google’s guidelines for Material design which makes it look good on every device.
+            		</td>
+        	    </tr>
+                <tr>
+            		<td>
+            		Creates consistency in design without making every product look the same. This framework enhances animation for smoother experience.
+            		</td>
+        	    </tr>
+        	    <tr>
+            		<td>
+            		Easy to work with accompanied by detailed documentation.
+            		</td>
+        	    </tr>
+        	    <tr>
+            		<td>
+            		Refined animations and transitions to provide a smoother experience for developers.
+            		</td>
+        	    </tr>
+        	    <tr>
+            		<td>
+            		Materialize also provides various components and behaviors not routinely found in other front-end frameworks. For example, CSS components: badges, scrollFire, scrollSpy, wave behaviors, and mobile-specific ones: slide-out drawer menus and toasts.
+            		</td>
+        	    </tr>
+        	    <tr>
+        	    	<td>
+        	    	2 versions: standard version with minified and unminified CSS and JS files, second version is SASS-based giving you more control over component selection.
+        	    	</td>
+        	    </tr>
+               </table>
+	</div>
+	<div id="Weaknesses" class = "scrollSpy">
+ 		<h2>Weaknesses</h2>
+        <table class="striped">
+          	<tr>
+            	<td>
+					Lower compatibility with Internet Explorer 10+ and a potential lack of future cross-browser compatibility because it doesn’t use Flexbox.
+             	</td>
+        	 </tr>
+        	 <tr>
+            	<td>
+            	 	Large file size makes Materialize a bulky framework to work with.
+            	</td>
+        	 </tr>
+        </table>
+
+ 	</div>
+    </div>
+ 	<div class="col hide-on-small-only m3 l2 ">
+      <div class="toc-wrapper">
+        <div style="height: 1px;">
+          <ul class="section table-of-contents">
+            <li><a href="#Summary">Summary</a></li>
+            <li><a href="#Popularity">Popularity & Uses</a></li>
+            <li><a href="#Strengths">Strengths</a></li>
+            <li><a href="#Weaknesses">Weaknesses</a></li>
+
+          </ul>
+        </div>
+      </div>
+    </div>
+	</div>
+	</div>
+	<!-- <%- // include("partials/footer") %> -->
+
+	<script>// ===== Scroll to Top ====
+        $(window).scroll(function() {
+            if ($(this).scrollTop() >= 50) {        // If page is scrolled more than 50px
+                $('#return-to-top').fadeIn(200);    // Fade in the arrow
+            } else {
+                $('#return-to-top').fadeOut(200);   // Else fade out the arrow
+            }
+        });
+        $('#return-to-top').click(function() {      // When arrow is clicked
+            $('body,html').animate({
+                scrollTop : 0                       // Scroll to top of body
+            }, 500);
+        });</script>
+
+
+</body>
+</html>

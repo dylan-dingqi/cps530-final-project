@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <%- include("partials/dependencies") %>
+    <title>404 Not Found</title>
+    <style>
+        .main {
+            height: 80vh;
+            min-height: 500px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+        }
+    </style>
+</head>
+<body>
+    <%- include("partials/navbar") %>
+    <div class="container main">
+        <h1 class="opacity-50 my-0">404</h1>
+        <h1 class="text-center mt-0">Sorry, page not found</h1>
+    </div>
+
+    <%- include("partials/footer") %>
+</body>
+</html>

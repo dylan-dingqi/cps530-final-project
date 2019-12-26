@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include("partials/dependencies") %>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script> -->
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script> -->
+    <!-- ICON NEEDS FONT AWESOME FOR CHEVRON UP ICON -->
+    <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
+    <a href="javascript:" id="return-to-top"><i class="icon-chevron-up"></i></a>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/public/css/installation.css">
+
+    <title>Node.js Installation</title>
+</head>
+<body>
+    <!-- <ul class="topnav">
+        <li><a href="/page6">Credits</a></li>
+        <li><a href="/page5">Conclusion</a></li>
+        <li><a href="/page4">Demo</a></li>
+        <li><a href="/page3">Tutorial</a></li>
+        <li><a class="active" href="/Installation">Installation</a></li>
+        <li><a href="/">Home</a></li>
+    </ul> -->
+    <%- include("partials/navbar") %>
+    <div class="container py-5">
+         <!--<a class="py-5" href="#materialize">Click here for materialize installation tutorial</a>-->
+
+        <h1><span class="color-green opacity-75">Node.js and Express </span><br>
+        Installation Tutorial</h1>
+        <p>As an asynchronous event-driven JavaScript runtime, Node.js is designed to build scalable network applications. In the following "hello world" example, many connections can be handled concurrently. Upon each connection, the callback is fired, but if there is no work to be done, Node.js will sleep.</p>
+        <p class="opacity-50">From official Node.js website</p>
+        <h4 class="pt-5">Download Node.js</h4><hr>
+        <p>1) Go to nodejs.org to download the source code accordingly to the operating system.</p>
+        <img class="z-depth-4" src="/public/img/nodeInstall.jpg" alt="">
+
+        <h4 class="pt-5">Install Node.js</h4><hr>
+        <p>2) Run the Node.js Setup installer.</p>
+        <img class="z-depth-4" src="/public/img/install1.jpg" alt="">
+
+        <p class="pt-5">3) Choose the features you would like to install on your computer. Follow the prompts of the installer.</p>
+        <img class="z-depth-4" src="/public/img/install2.jpg" alt="">
+
+        <h4 class="pt-5">Testing</h4><hr>
+        <p>1) Test Node: To see if Node is installed on your computer, open command prompt and run the command node -v in the terminal. This will show the current installed version of Node on your computer.</p>
+        <p>2) Test NPM: To see if NPM is installed on your computer, type and run the command npm -v in the terminal. This will show the the version of NPM installed.</p>
+
+        <h4 class="pt-5">Set up a server using Express framework</h4><hr>
+        <p>1) First, initialize the project by typing "npm init" in the project directory, and follow the prompt to finish initialization</p>
+        <img class="z-depth-4" src="/public/img/express1.jpg" alt="">
+
+        <p class="pt-5">2) Then, install express by typing "npm install express" in the project directory in terminal. The framework and its dependency will be installed in the node_modules direcory</p>
+        <img class="z-depth-4" src="/public/img/express2.jpg" alt="">
+
+        <p class="pt-5">3) Now, create a file called index.js, and type in the following code to create a simple Express server</p>
+        <img class="z-depth-4" src="/public/img/express3.jpg" alt="">
+
+        <p class="pt-5">4) Finally, we can start the server by typing "node index.js" in the terminal, and we can test the server by going to "localhost:3000/" on the browser</p>
+        <img class="z-depth-4" src="/public/img/express4.jpg" alt="">
+
+
+
+
+        <!-- <br><p class="waves-effect waves-teal btn-flat offset-10"><a href="#">Back to top</a></p> -->
+    </div>
+
+    <script>// ===== Scroll to Top ====
+        $(window).scroll(function() {
+            if ($(this).scrollTop() >= 50) {        // If page is scrolled more than 50px
+                $('#return-to-top').fadeIn(200);    // Fade in the arrow
+            } else {
+                $('#return-to-top').fadeOut(200);   // Else fade out the arrow
+            }
+        });
+        $('#return-to-top').click(function() {      // When arrow is clicked
+            $('body,html').animate({
+                scrollTop : 0                       // Scroll to top of body
+            }, 500);
+        });</script>
+
+    <%- include("partials/footer") %>
+</body>
+</html>

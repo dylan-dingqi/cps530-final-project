@@ -1,0 +1,115 @@
+body {
+margin: auto;
+}
+h1 {
+  font-size: 350%;
+}
+p {
+  font-family: 'Roboto', sans-serif;
+}
+/* .container {
+  text-align:center;
+} */
+
+/*Body split*/
+.split {
+  height: 100%;
+  width: 50%;
+  position: fixed;
+  z-index: -1;
+  top: 0;
+  overflow-x: hidden;
+
+}
+
+.main {
+  height: 100vh;
+  min-height: 500px;
+}
+/* Control the left side */
+.left-side {
+  display: flex;
+  height:100%;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align:center;
+  /* background-color: white; */
+   animation: pop-in .9s ease-out forwards;
+}
+.left-side .text{
+  padding-bottom: 75px;
+}
+
+.w-75 {
+  width: 75%;
+}
+.w-50 {
+  width: 50%;
+}
+
+.m-auto {
+  margin-left:auto;
+  margin-right:auto;
+}
+/* Control the right side */
+.right-side {
+  /* width:100%; */
+  height: 100%;
+  margin: 0 !important;
+  padding: 0 !important;
+  background-color: none;
+  animation: pop-in .9s ease-out forwards;
+  z-index:0;
+}
+.right-side img {
+  width: 100%;
+  height:100%;
+  object-fit: cover;
+}
+
+/* If you want the content centered horizontally and vertically */
+.centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+/* Style the image inside the centered container, if needed */
+.centered img {
+
+}
+/*BUUTON*/
+.button {
+  background-color: #ee6e73;
+  border: none;
+  color: white;
+  padding: 15px 25px;
+  text-align: center;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.button:hover {
+  background-color: #D86367;
+}
+
+
+@media (max-width: 600px) {
+  .w-50 {
+    width: 90%;
+  }
+}
+/*TRANSITION*/
+@keyframes pop-in {
+  0% {
+    opacity: 0;
+    transform: translateY(-4rem) scale(.8);
+  }
+  100% {
+    opacity: 1;
+    transform: none;
+  }
+}

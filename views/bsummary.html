@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <title>Node.js Back-end Summary</title>
+    
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/public/css/installation.css">
+
+    <!-- Return to Top -->
+    <a href="javascript:" id="return-to-top"><i class="icon-chevron-up"></i></a>
+
+    <!-- ICON NEEDS FONT AWESOME FOR CHEVRON UP ICON -->
+    <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
+    
+    <link rel="stylesheet" href="/public/css/bsummary.css">
+</head>
+<body>
+      <%- include("partials/navbar") %>
+
+    <div class="container py-5">
+        <h1>Node.js <br>
+        Back-End Summary</h1>
+        <p>As an asynchronous event-driven JavaScript runtime, Node.js is designed to build scalable network applications. Upon each connection, the callback is fired, but if there is no work to be done, Node.js will sleep.</p>
+        <h4 class="pt-5">Node.js Popularity</h4><hr>
+        <p>Over the years, Node.js's popularity has steadily risen. This is due to it's performance and benefit of allowing programmers to build end-to-end Javascript applications. The image below shows the steady increase in the amount of Node.js related questions being asked on https://stackoverflow.com. We can see an upwards trend of Node.js along with the years. </p>
+        <img class="z-depth-4" src="/public/img/popularityGraph.jpg" alt="">
+        <br>
+        <h4 class="pt-5">Node.js Strenths VS Weaknesses</h4><hr>
+        <p>Like all programming languages and frameworks, there is an upside and downside. Following table lists the strengths and weaknesses of Node.js.</p>
+        <table class="table">
+            <thead class="thead-dark">
+              <tr >
+                <th >STRENGTHS</th>
+                <th >WEAKNESSES</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Node.js offers easy scalability</td>
+                <td>Node.js does not have consistency, and is not stable</td>
+              </tr>
+              <tr>
+                <td >It is eary to learn</td>
+                <td >Programming is time consuming</td>
+              </tr>
+              <tr>
+                <td >Can be used for Full Stack, not just back end</td>
+                <td >Node.js does not support multi-threading programming/</td>
+              </tr>
+              <tr>
+                <td >Provides extended support for various commonly used tools</td>
+                <td >Performance bottlenecks with heavy computation tasks</td>
+              </tr>
+              <tr>
+                <td >Capable of processing several requests concurrently</td>
+                <td >Has limited library support</td>
+              </tr>
+            </tbody>
+        </table>
+
+        <h4 class="pt-5">Node.js's usage around the world</h4><hr>
+        <p>The following shows some of the companies which use Node.js</p>
+        <ul style="list-style-type:initial;">
+            <li>Netflix</li>
+            <li>LinkedIn</li>
+            <li>PayPal</li>
+            <li>Uber</li>
+            <li>Mozilla Firefox</li>
+            <li>Twitter</li>
+          </ul> 
+          
+    </div>
+    <!-- <div class="row">
+            <div class="waves-effect waves-teal btn-flat col s1 offset-s10"><a href="#">Back to top</a></p>
+    </div> -->
+
+    <script>// ===== Scroll to Top ==== 
+      $(window).scroll(function() {
+          if ($(this).scrollTop() >= 50) {        // If page is scrolled more than 50px
+              $('#return-to-top').fadeIn(200);    // Fade in the arrow
+          } else {
+              $('#return-to-top').fadeOut(200);   // Else fade out the arrow
+          }
+      });
+      $('#return-to-top').click(function() {      // When arrow is clicked
+          $('body,html').animate({
+              scrollTop : 0                       // Scroll to top of body
+          }, 500);
+      });</script>
+    <%- include("partials/footer") %>
+</body>
+</html>
